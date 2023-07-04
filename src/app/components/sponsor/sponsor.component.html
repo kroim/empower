@@ -1,0 +1,117 @@
+<div id="help-now" class="sponsor-container">
+  <h1 *ngIf="main" class="sponsor-header">decide your impact!</h1>
+  <h2 *ngIf="!main" class="sponsor-header">decide your impact!</h2>
+  <div class="join-text">
+    <div class="impact-text">
+      Every $1 cleans up 1kg of plastic waste!
+    </div>
+    <div (click)="hideAnswer = !hideAnswer" class="sponsor-spent-question">+ Where does the money go?</div>
+    <div [hidden]="hideAnswer" class="sponsor-spent-answer">
+      To ensure development, charity work and cleanups from day 1:
+      <ul>
+        <li>
+          <b>80%</b> of the money goes directly to the cleaners!
+        </li>
+        <li>
+          <b>15%</b> is used to develop and bring the Empower solution everywhere</li>
+        <li>
+          <b>5%</b> goes to partnering NGOs that has a vision that we believe in</li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="columns">
+      <div class="column col-4 col-md-12">
+        <div class="call-to-action">
+          <div class="cta-header">Plastic Neutral</div>
+          <img class="cta-badge" src="assets/plastic-neutral.png">
+          <div class="cta-text">Removes 3kg of plastic
+            <br>
+            ($3 / month)
+          </div>
+          <button (click)="supportLevel1()" class="cta-button">Subscribe now!</button>
+        </div>
+      </div>
+      <div class="column col-4 col-md-12">
+        <div class="call-to-action">
+          <div class="cta-header">Plastic Positive</div>
+          <img class="cta-badge" src="assets/plastic-positive.png">
+          <div class="cta-text">Removes 5kg of plastic
+            <br>
+            ($5 / month)
+          </div>
+          <button (click)="supportLevel2()" class="cta-button">Subscribe now!</button>
+        </div>
+      </div>
+      <div class="column col-4 col-md-12">
+        <div class="call-to-action">
+          <div class="cta-header">Plastic Hero</div>
+          <img class="cta-badge" src="assets/plastic-hero.png">
+          <div class="cta-text">Removes 10kg of plastic
+            <br>
+            ($10 / month)
+          </div>
+          <button (click)="supportLevel3()" class="cta-button">Subscribe now!</button>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column col-12">
+        <div class="one-time-text" (click)="toggleCustom()">Or do you want to do a <span class="link-lookalike">one-time
+            sponsorship?</span></div>
+        <div class="wants-to-choose" *ngIf="wantToChoose">
+          <div *ngIf="!isGift" class="choose-own-amount">
+            <div class="choose-header">
+              Do a one-time sponsorship:
+            </div>
+            <div>
+              $
+              <input [(ngModel)]="customOneTimeAmountModel" min="0" step="1" type="number" placeholder="$">
+              <button (click)="customOneTime()" [disabled]="customOneTimeAmountModel <= 0">Go!</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns gift-header-column">
+      <div class="column col-12">
+        <h2 class="gift-header">give a gift with impact</h2>
+        <div class="impact-text">
+            Give a gift with meaning. Every $1 cleans up 1kg of plastic!
+          </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column col-1 hide-md">
+        &nbsp;
+      </div>
+      <div class="column col-5 col-md-12">
+        <div class="call-to-action">
+          <div class="cta-header">1/2 Year Plastic Positive Gift Certificate</div>
+          <img class="cta-badge" src="assets/plastic-gift-30.png">
+          <div class="cta-text">Removes 30kg of plastic
+            <br>
+            $30 once
+          </div>
+          <button (click)="giftHalfYear()" class="cta-button">Buy now!</button>
+        </div>
+      </div>
+      <div class="column col-5 col-md-12">
+        <div class="call-to-action">
+          <div class="cta-header">1 Year Plastic Positive Gift Certificate</div>
+          <img class="cta-badge" src="assets/plastic-gift-60.png">
+          <div class="cta-text">Removes 60kg of plastic
+            <br>
+            $60 once
+          </div>
+          <button (click)="giftOneYear()" class="cta-button">Buy now!</button>
+        </div>
+      </div>
+      <div class="column col-1 hide-md">
+        &nbsp;
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+@import "../../../variables.scss";
+
+.header-container {
+  height: 66px;
+  padding-top: 20px;
+
+  @media screen and (min-width: 1000px) {
+    padding-left: calc((100% - 1000px + 20px) / 2);
+    padding-right: calc((100% - 1000px + 20px) / 2);
+  }
+
+  font-weight: 500;
+}
+
+.small-container {
+  display: none;
+}
+
+.navigation-link.active-link {
+  border-bottom: solid $dark-green;
+}
+
+.navigation-link:hover {
+  border-bottom: solid $dark-green;
+}
+
+.navigation-items {
+  display: flex;
+}
+
+.navigation-items-box-left .navigation-item {
+  margin-right: 40px;
+
+  @media screen and (max-width: 800px) {
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-right: 16px;
+  }
+
+  @media screen and (max-width: 630px) {
+    margin-right: 12px;
+  }
+}
+
+.navigation-items-box-right .navigation-item {
+  margin-left: 40px;
+
+  @media screen and (max-width: 800px) {
+    margin-left: 20px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-left: 16px;
+  }
+
+  @media screen and (max-width: 630px) {
+    margin-left: 12px;
+  }
+}
+
+.navigation-items-box-center {
+  flex: 0;
+}
+
+.navigation-items-box-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation-items-box-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-item {
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+
+  img {
+    width: 75%;
+  }
+}
+
+.header-menu {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .header-container {
+    height: inherit;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .header-menu {
+    margin-right: 10px;
+  }
+
+  .navigation-items {
+    display: none;
+  }
+
+  .navigation-item-hide-sm {
+    display: none;
+  }
+
+  .navigation-items-box-left {
+    display: block;
+  }
+
+  .navigation-items-box-right {
+    display: block;
+  }
+
+  .navigation-items.show-small {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .navigation-item {
+      margin-left: 20px;
+      margin-right: 0;
+      margin-top: 5px;
+    }
+  }
+
+  .small-container {
+    display: flex;
+  }
+
+  .small-logo {
+    height: 40px;
+    margin-left: 10px;
+  }
+  
+}
+
+.header-logo {
+  width: 80px;
+  cursor: pointer;
+}

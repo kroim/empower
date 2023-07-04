@@ -1,0 +1,44 @@
+@import "../../../variables.scss";
+
+app-page {
+  margin-top: 30px;
+}
+
+.team-container {
+  padding-bottom: 50px;
+
+  @media screen and (max-width: 360px) {
+    padding: 0 25px 25px 25px;
+  }
+}
+
+.team-header {
+  font-size: 45pt;
+}
+
+.team-member {
+  padding: 10px;
+  color: $light-green;
+  text-align: center;
+}
+
+.team-profile-pic {
+  width: 90%;
+  border-radius: 50%;
+}
+
+.the-team-padding {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.team-text-padding {
+  padding-top: 17px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .team-profile-pic {
+    width: 65%;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="app-container">
+  <app-newheader></app-newheader>
+  <router-outlet></router-outlet>
+  <app-newfooter></app-newfooter>
+  <div *ngIf="isBrowser">
+    <ngx-smart-modal [escapable]="false" [dismissable]="false" #myModal identifier="myModal">
+      <div class="popup">
+          <h1>Buy a gift with meaning</h1>
+          <div>
+            Make someone a superhero this christmas,<br>give a gift card that cleans up plastic waste!
+          </div>
+          <a href="christmasgift">
+            <img src="assets/christmas-gift-share-picture-eng.jpg">
+            <button>Check it out</button>
+          </a>
+      </div>
+  
+    </ngx-smart-modal>
+  </div>
+
+</div>

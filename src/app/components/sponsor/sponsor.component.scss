@@ -1,0 +1,173 @@
+@import "../../../variables.scss";
+
+.sponsor-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+h1, h2 {
+  text-align: center;
+  font-size: 36pt;
+}
+
+h3 {
+  text-transform: lowercase;
+  font-size: 18pt;
+  text-decoration: underline;
+}
+
+.link-lookalike {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.one-time-text {
+  font-size: 16pt;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.join-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.impact-text {
+  text-align: center;
+  font-size: 14pt;
+  margin-bottom: 5px;
+}
+
+.superboost-button {
+  margin-top: 20px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.option-title {
+  font-weight: bold;
+}
+
+.gift-text {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20pt;
+}
+
+.gift-header-column {
+  margin-bottom: 20px;
+}
+
+.gift-header {
+  text-align: center;
+  margin-top: 75px;
+}
+
+.want-to-choose {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.wants-to-choose {
+  margin-top: 20px;
+}
+
+.choose-own-amount {
+  text-align: center;
+
+  input {
+    max-width: 300px;
+    vertical-align: bottom;
+  }
+
+  button {
+    height: 40px;
+    width: 100px;
+    margin-left: 5px;
+  }
+}
+
+.sponsor-spent-question {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sponsor-spent-answer {
+  background-color: #fff;
+  text-align: left;
+  width: 80%;
+  min-width: 320px;
+  color: $dark-green;
+  padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+
+.call-to-action {
+  background-color: $light-green;
+  color: #fff;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px 40px;
+
+  @media screen and (max-width: 840px) {
+    margin-top: 20px;
+  }
+
+  .cta-header {
+    text-transform: uppercase;
+    font-size: 18pt;
+    font-weight: 500;
+  }
+
+  .cta-badge {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .cta-text {
+    font-size: 13pt;
+  }
+
+  .cta-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 15pt;
+    background-color: $peach;
+    color: #fff;
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-top: 20px;
+  }
+
+  .cta-button:hover {
+    color: #fff;
+    background-color: $peach;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .columns {
+    flex-direction: column-reverse;
+  }
+
+  .want-to-choose {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+}

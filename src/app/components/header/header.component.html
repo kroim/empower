@@ -1,0 +1,36 @@
+<div class="header-container">
+  <div class="small-container">
+    <img class="small-logo" (click)="goHome()" src="assets/small-logo.png">
+    <img class="header-menu" (click)="toggleMenu()" src="assets/menu.png">
+  </div>
+  <div id="navigation-items-block" class="navigation-items">
+    <div class="navigation-items-box-left">
+      <div class="navigation-item">
+          <a class="navigation-link" [class.active-link]="getTextDecorationStyle('/')" (click)="goHome()">Home</a>
+      </div>
+      <div class="navigation-item">
+        <a class="navigation-link" [class.active-link]="getTextDecorationStyle('/about')" (click)="goTo('/about')">About</a>
+      </div>
+      <div class="navigation-item">
+        <a class="navigation-link" [class.active-link]="getTextDecorationStyle('/ambassador')" (click)="goTo('/ambassador')">Ambassadors</a>
+      </div>
+    </div>
+    <div class="navigation-items-box navigation-items-box-center">
+      <div class="navigation-item-hide-sm">
+        <img class="navigation-link" (click)="goHome()" class="header-logo" src="assets/logo_with_text.png">
+      </div>
+    </div>
+    <div class="navigation-items-box-right">
+      <div class="navigation-item">
+        <a class="navigation-link" [class.active-link]="getTextDecorationStyle('/checkout')" (click)="goTo('/checkout')">Remove plastic</a>
+      </div>
+      <div class="navigation-item">
+          <a class="navigation-link" [class.active-link]="getTextDecorationStyle('/blog')" (click)="goTo('/blog')">Blog</a>
+      </div>
+      <div class="navigation-item">
+        <a class="navigation-link" *ngIf="isLoggedIn" [class.active-link]="getTextDecorationStyle('/my-page')" (click)="goTo('/my-page')">My Page</a>
+        <a class="navigation-link" *ngIf="!isLoggedIn" [class.active-link]="getTextDecorationStyle('/login')" (click)="goTo('/login')">Log in</a>
+      </div>
+    </div>
+  </div>
+</div>

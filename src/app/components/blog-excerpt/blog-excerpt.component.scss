@@ -1,0 +1,63 @@
+@import "../../../variables.scss";
+
+.blog-excerpt-container {
+  height: calc(100% - 50px);
+}
+
+.blog-excerpt-container:hover {
+  .blog-excerpt-content {
+    background-color: $dark-green;
+    cursor: pointer;
+  }
+
+  .about-link {
+    color: #fff;
+  }
+}
+
+.blog-excerpt-content {
+  position: relative;
+  background-color: #fff;
+  padding: 40px;
+  color: $light-green;
+  height: calc(100%);
+
+  @media screen and (max-width: 600px) {
+    height: auto;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 20px;
+  }
+}
+
+.featured-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+app-blog-author-box {
+  display: block;
+  margin-bottom: -40px;
+  color: $light-green;
+}
+
+.blog-title {
+  color: $light-green;
+  text-transform: lowercase;
+  margin-top: 10px;
+
+  @media screen and (max-width: 400px) {
+    font-size: 20pt;
+  }
+}
+
+.about-link {
+  text-transform: uppercase;
+  border-bottom: solid;
+  font-size: 10pt;
+  position: absolute;
+  bottom: 14px;
+  right: 22px;
+  font-weight: 600;
+}

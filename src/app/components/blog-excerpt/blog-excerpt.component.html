@@ -1,0 +1,12 @@
+<div [routerLink]="['/blog', post.slug]" class="blog-excerpt-container">
+  <app-blog-author-box [post]="post"></app-blog-author-box>
+
+  <div class="blog-excerpt-content">
+    <div class="image-container">
+      <img class="featured-image" [src]="post.featured_image">
+    </div>
+    <h2 class="blog-title">{{post.title}}</h2>
+    <div [innerHTML]="post.excerpt"></div>
+    <a class="about-link" [routerLink]="['/blog', post.slug]">Read more</a>
+  </div>
+</div>

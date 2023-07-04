@@ -1,0 +1,45 @@
+@import "../../../variables.scss";
+
+.total-cleaning-stats-container {
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+
+    .before {
+        font-size: 1.8em;
+    }
+    .main {
+        font-size: 3em;
+    }
+    .after {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .total-cleaning-stats-container {
+        .before {
+            font-size: 18pt;
+        }
+        .main {
+            font-size: 24pt;
+        }
+        .after {
+            font-size: 18pt;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .total-cleaning-stats-container {
+        .before {
+            font-size: 16pt;
+        }
+        .main {
+            font-size: 22pt;
+        }
+        .after {
+            font-size: 16pt;
+        }
+    }
+}
