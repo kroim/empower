@@ -1,0 +1,48 @@
+<app-page>
+  <div class="columns">
+    <div class="column col-12">
+      <div>
+        <a class="back-to-blog-link" [routerLink]="['/blog']">Back to Blog</a>
+        <div *ngIf="post" class="container blog-post-container">
+          <div class="columns">
+            <div class="column author-column col-12">
+              <app-blog-author-box [post]="post"></app-blog-author-box>
+            </div>
+          </div>
+          <div class="columns blog-content-container white-background">
+            <div class="column col-6 col-sm-12">
+              <div class="featured-image-container">
+                <img class="featured-image" [src]="post.featured_image">
+              </div>
+            </div>
+            <div class="column col-6 col-sm-12">
+              <h1 class="big-header">
+                {{post.title}}
+              </h1>
+            </div>
+          </div>
+          <div class="columns main-content-column white-background">
+            <div class="column col-12">
+              <div class="ingress" [innerHTML]="post.excerpt"></div>
+              <div class="blog-text-container">
+                <div class="left-side-column">
+                  <img [src]="post.author.avatar_URL">
+                  <br>
+                  {{post.author.first_name}} {{post.author.last_name}}
+                </div>
+                <div class="main-side-column">
+                  <app-blog-content-container [content]="post.content"></app-blog-content-container>
+                  <div class="sharing-container">
+                    <img (click)="shareToFacebook()" src="assets/facebookshare.png">
+                    <img (click)="shareToTwitter()" src="assets/twittershare.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <app-blog-author-box class="author-box-bottom" [post]="post"></app-blog-author-box>
+        </div>  
+      </div>
+    </div>
+  </div>
+</app-page>

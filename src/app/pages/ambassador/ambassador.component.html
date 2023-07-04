@@ -1,0 +1,133 @@
+<app-page>
+  <div class="columns">
+    <div class="column col-12">
+      <div class="container">
+        <div class="columns">
+          <div class="column header-image-container hide-sm col-6">
+            <img class="header-image" src="assets/ambassador.jpg" />
+          </div>
+          <div class="column col-6 col-sm-12">
+            <h1 class="big-header">
+              become an <br />
+              ambassador!
+            </h1>
+            <div class="about-box">
+              <p>Join the fast growing Empower community now!</p>
+              <p>
+                Help us spread the word and get rewarded. If you are passionate
+                about helping clean the world of plastic waste, there are many
+                ways to do it. Becoming an ambassador is one of them.
+              </p>
+              <p>
+                You can apply at the bottom of the page.<a
+                  href="/ambassador#apply"
+                  ><img class="down-arrow" src="assets/arrow-down.png"
+                /></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column col-12 join-container">
+      <!-- <app-map></app-map> -->
+
+      <h2 class="why-join-header">why join?</h2>
+
+      <div class="container">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <div class="ambassador-sub-header">3 good reasons</div>
+            <div class="ambassador-text">
+              <ol>
+                <li>You take action to reduce plastic waste and poverty</li>
+                <li>
+                  You are a part of our global community, spreading the word and
+                  helping the World!
+                </li>
+                <li>
+                  You’re invited to events and beach clean ups, YOU are
+                  essential to this clean-up Party!
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="column col-6 col-sm-12">
+            <div class="ambassador-sub-header">
+              Other cool stuff as well? YES!
+            </div>
+            <div class="ambassador-text">
+              <ul>
+                <li>Meet like minded people all over the World</li>
+                <li>
+                  You do also earn SupportEMPs (yes, get your own gluten free &
+                  vegan cryptocurrency!)
+                </li>
+                <li>
+                  Use sEMPs to buy T-shirts and merch made of Empower plastic,
+                  show the world you care!
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="apply" class="apply">
+        <h3 class="apply-header">ambassador application</h3>
+
+        <div *ngIf="isLoggedIn && !applied">
+          <div class="input-container">
+           *  Name:<br />
+            <input [(ngModel)]="name" />
+          </div>
+          <div class="input-container">
+            * Country:<br />
+            <input [(ngModel)]="country" />
+          </div>
+
+          <div class="input-container">
+            * Why would you like to become an Empower ambassador?<br />
+            <textarea [(ngModel)]="why"></textarea>
+          </div>
+          <div class="input-container">
+            * How would you like to contribute? <br>(eg. spread knowledge, pitch at
+            events, arrange cleanups) <br />
+            <textarea [(ngModel)]="how"></textarea>
+          </div>
+
+          <div class="input-container">
+            * Relevant education/knowledge?<br />
+            <textarea [(ngModel)]="relevant"></textarea>
+          </div>
+
+          <div class="input-container">
+            * How involved would you like to be/how much time do you have?<br> Weekly,
+            Monthly, Rarer <br />
+            <textarea [(ngModel)]="involved"></textarea>
+          </div>
+          <div class="input-container">
+            Instagram profile, blog etc.<br />
+            <input [(ngModel)]="social" />
+          </div>
+          <button class="log-in-button" (click)="submit()">Apply!</button>
+        </div>
+        <div *ngIf="!isLoggedIn && !applied && !err">
+          Create a <b>quick</b> user to apply to being an ambassador now! <br />
+          <button class="log-in-button" (click)="logIn()">
+            Log in / Register to apply
+          </button>
+        </div>
+        <div *ngIf="applied">
+          Thank you so much for you application. <br />
+          We'll get in touch with you shorty!
+        </div>
+        <div *ngIf="err">
+          Something went wrong: {{ err }} <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</app-page>

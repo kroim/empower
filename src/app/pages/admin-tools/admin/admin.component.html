@@ -1,0 +1,38 @@
+<app-page>
+  <ngx-loading
+    [show]="loading"
+    [config]="{ fullScreenBackdrop: true }"
+  ></ngx-loading>
+
+  <div class="columns">
+    <div class="column col-12">
+      <h1>admin tools</h1>
+      <hr />
+      <div class="admin-tool-container">
+        <app-make-ambassador
+          [setLoading]="setLoading.bind(this)"
+        ></app-make-ambassador>
+      </div>
+      <div class="admin-tool-container">
+        <app-update-crypto
+          [setLoading]="setLoading.bind(this)"
+        ></app-update-crypto>
+      </div>
+      <div class="admin-tool-container">
+        <app-add-waste-station
+          [setLoading]="setLoading.bind(this)"
+        ></app-add-waste-station>
+      </div>
+      <div class="admin-tool-container">
+        <app-remove-waste-station
+          [setLoading]="setLoading.bind(this)"
+        ></app-remove-waste-station>
+      </div>
+      <div class="admin-tool-container">
+        <app-add-plastic-waste
+          [setLoading]="setLoading.bind(this)"
+        ></app-add-plastic-waste>
+      </div>
+    </div>
+  </div>
+</app-page>

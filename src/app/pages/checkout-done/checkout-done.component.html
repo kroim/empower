@@ -1,0 +1,38 @@
+<app-page>
+  <ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>
+
+  <div class="container">
+    <div class="columns">
+      <div class="column col-12 col-content">
+        <h1 class="checkout-done-header">
+          <div *ngIf="loading">
+            Please wait, we are completing the order...
+          </div>
+          <div *ngIf="!loading && !error">
+            Thank you for the order!
+          </div>
+          <div *ngIf="error">
+            Error!
+          </div>
+        </h1>
+
+        <div *ngIf="!loading && !error">
+          <div class="text-center">
+            <p>
+              Thank you so much for supporting Empower in its mission to clean up all the plastic waste in the world
+            </p>
+            <p *ngIf="isGift">
+              Your gift card has been sent to your email.
+            </p>
+          </div>
+          <br>
+          <app-share *ngIf="!isGift"></app-share>
+        </div>
+
+        <div *ngIf="error">
+          Something went wrong: {{ error }}
+        </div>
+      </div>
+    </div>
+  </div>
+</app-page>

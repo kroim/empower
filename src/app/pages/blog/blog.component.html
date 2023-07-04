@@ -1,0 +1,22 @@
+<app-page>
+  <div class="columns">
+    <div class="column col-12">
+      <div class="content-container">
+        <div class="blog-header">
+            <h1>the empower blog</h1>
+            <div class="blog-header-text">
+              Read the latest stories and information from the Empower Team and our Ambassadors!
+            </div>
+        </div>
+        
+        <div class="container">
+          <div class="columns">
+            <div class="column col-6 col-md-12 excerpt-column" *ngFor="let post of wpPosts.posts">
+              <app-blog-excerpt [post]="post"></app-blog-excerpt>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-page>

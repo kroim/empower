@@ -1,0 +1,66 @@
+@import "../../../variables.scss";
+
+.col-about {
+  z-index: 2;
+}
+
+.about-section-container {
+  background-color: #fff;
+  padding: 40px;
+  width: 100%;
+  margin: 50px 0 0 44px;
+}
+
+.dirty-bottles {
+  width: 100%;
+  margin-left: -44px;
+
+  @media screen and (max-width: 1150px) {
+    width: 90%;
+  }
+}
+
+.timeline-image {
+  width: 120%;
+  margin-left: -10%;
+
+  @media screen and (max-width: 1300px) {
+    width: 100%;
+    margin-left: 25px;
+  }
+
+}
+
+.time-line-columns {
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about-section-container {
+    margin-left: 70px;
+    width: 120%;
+  }
+
+  .dirty-bottles { 
+    margin-left: -105px;
+    width: 110%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-section-container {
+    margin-left: 70px;
+    width: 130%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-section-container {
+    margin: 0;
+    width: 100%;
+  }
+}

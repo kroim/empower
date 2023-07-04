@@ -1,0 +1,24 @@
+<app-page>
+  <ngx-loading
+    [show]="loading"
+    [config]="{ fullScreenBackdrop: true }"
+  ></ngx-loading>
+  <div class="columns">
+    <div class="column col-12">
+      <div class="transaction-container" *ngFor="let record of records">
+        <h3>Transaction</h3>
+        id: {{ record.id }}<br />
+        ipfs hash: {{ record.ipfsHash }}<button (click)="getIpfsRecord(record)">Load IPFS Record</button><br>
+        ipfs obj: {{ record.ipfsObj }}<br />
+        
+
+        <div *ngFor="let op of record.operations">
+          type: {{ op.type }}<br />
+          amount: {{ op.amount }} {{ op.asset_code }}<br />
+          to: {{ op.to }}<br />
+        </div>
+      </div>
+      <button (click)="loadMore()">Load More</button>
+    </div>
+  </div>
+</app-page>

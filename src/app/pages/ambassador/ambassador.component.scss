@@ -1,0 +1,161 @@
+@import "../../../variables.scss";
+
+app-page {
+  margin-top: 80px;
+}
+
+.big-header {
+  font-family: "HK Kontrast";
+  font-size: 40pt;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  padding: 90px 0 0 50px;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 40pt;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 30pt;
+    padding: 70px 0 0 40px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 65px 0 0 30px;
+  }
+
+  @media screen and (max-width: 360px) {
+    text-align: center;
+  }
+}
+
+.about-box {
+  background-color: #fff;
+  padding: 50px 50px 40px 50px;
+  margin-left: -100px;
+  margin-top: 60px;
+  position: relative;
+  font-size: 13pt;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 12pt;
+  }
+
+  @media screen and (max-width: 900px) {
+    margin-top: 30px;
+  }
+
+  @media screen and (max-width: 750px) {
+    padding: 35px 35px 10px 35px;
+  }
+
+  @media screen and (max-width: 680px) {
+    padding: 25px 25px 10px 25px;
+  }
+}
+
+.down-arrow {
+  width: 35px;
+  margin-bottom: -12px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.why-join-header {
+  font-family: "HK Grotesk";
+  text-transform: lowercase;
+  color: $peach;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.log-in-button {
+  width: 50%;
+  height: 40px;
+}
+
+.ambassador-sub-header {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ambassador-text {
+  padding-right: 20px;
+  ol, ul {
+    margin-left: 0;
+  }
+}
+
+.apply {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border: solid $light-green;
+  padding: 35px;
+  text-align: center;
+
+  .input-container {
+    margin-bottom: 10px;
+  }
+
+  .apply-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "HK Grotesk";
+    text-transform: uppercase;
+    color: $peach;
+    font-weight: 600;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+
+  input {
+    max-width: 500px;
+  }
+
+  textarea {
+    max-width: 100%;
+    border-radius: 0;
+    width: 500px;
+    margin-top: 5px;
+    border: none;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  app-page {
+    margin-top: 0;
+  }
+
+  .big-header {
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  .about-box {
+    margin: 0;
+    padding: 25px;
+  }
+
+  .log-in-button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .join-container {
+    padding: 25px;
+  }
+
+  .apply {
+    padding: 10px;
+  }
+}

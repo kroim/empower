@@ -1,0 +1,152 @@
+<app-page>
+  <div class="columns">
+    <div class="column christmas-landing-page-container col-12">
+      <div class="logo-container">
+        <img class="logo-img" src="assets/empowergreenlogowithtext.png" />
+      </div>
+      <div class="container">
+        <div class="columns">
+          <div class="column col-4 supernisse-column">
+            <img class="supernisse" src="assets/Empower-supernisse_v01.png" />
+          </div>
+          <div class="column header-column col-8">
+            <div class="header-container">
+              <img
+                class="supernisse-small"
+                src="assets/Empower-supernisse_v01.png"
+              />
+              <h1>
+                <span class="top-header-text">Vær en</span><br /><span
+                  class="bottom-header-text"
+                  >supernisse i år!</span
+                >
+              </h1>
+            </div>
+
+            <div class="subheader-text">
+              For hver dollar ryddes det en kilo plast et sted i verden. Du
+              bidrar til en renere verden og arbeidsplasser der de trengs som
+              mest!
+            </div>
+            <div class="container">
+              <div class="columns gift-choice-columns">
+                <div class="column gift-choice-column col-4">
+                  <div class="gift-block">
+                    <div class="gavekort-header">Gavekort</div>
+                    <img class="gift-img" src="assets/1_30dollar_v01.png" />
+                    <div class="gavekort-subheader">6 mnd plastpositiv</div>
+                    <div class="gavekort-explainer">
+                      <ul>
+                        <li>Rydder 30 kilo plastsøppel</li>
+                        <li>Gavekort ferdig med navn på epost</li>
+                        <li>Se bidragets effekt</li>
+                      </ul>
+                    </div>
+                    <button
+                      class="buy-button"
+                      (click)="selectChristmasCard30()"
+                    >
+                      Kjøp nå
+                    </button>
+                  </div>
+                </div>
+                <div class="column gift-choice-column col-4">
+                  <div class="gift-block">
+                    <div class="gavekort-header">Gavekort</div>
+                    <img class="gift-img" src="assets/2_60dollar_v01.png" />
+
+                    <div class="gavekort-subheader">12 mnd plastpositiv</div>
+                    <div class="gavekort-explainer">
+                      <ul>
+                        <li>Rydder 60 kilo plastsøppel</li>
+                        <li>Gavekort ferdig med navn på epost</li>
+                        <li>Se bidragets effekt</li>
+                      </ul>
+                    </div>
+                    <button
+                      class="buy-button"
+                      (click)="selectChristmasCard60()"
+                    >
+                      Kjøp nå
+                    </button>
+                  </div>
+                </div>
+                <div class="column gift-choice-column col-4">
+                  <div class="gift-block">
+                    <div class="gavekort-header">Gavekort</div>
+                    <img class="gift-img" src="assets/3_valgfri_v01.png" />
+                    <div class="gavekort-subheader customer-gavekort-subheader">
+                      Velg beløp
+                      <div class="custom-amount-container">
+                          <button (click)="decrease()" class="change-amount-button">
+                              -
+                            </button>
+                            <div class="custom-amount-text">${{ customAmount }}</div>
+                            <button (click)="increase()" class="change-amount-button">
+                              +
+                            </button>
+                        </div>
+                     
+                    </div>
+                    <div class="gavekort-explainer">
+                      <ul>
+                          <li>Rydder {{ customAmount }} kilo plastsøppel</li>
+                        <li>Gavekort ferdig med navn på epost</li>
+                        <li>Se bidragets effekt</li>
+                      </ul>
+                    </div>
+                    
+                    <button
+                      class="buy-button"
+                      (click)="selectChristmasCardCustom()"
+                    >
+                      Kjøp nå
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-12">
+            <div class="how-it-works-container">
+              <div class="how-it-works-header">Slik fungerer det</div>
+              <div class="how-it-works-step">
+                <img src="assets/step1.png" /> 1. Bidrag muliggjør oppryddinger
+                på alle kontinenter
+              </div>
+              <div class="how-it-works-step">
+                <img src="assets/step2.png" /> 2. Plastsøppel ryddes og leveres
+                til godkjent mottak
+              </div>
+              <div class="how-it-works-step">
+                <img src="assets/step3.png" /> 3. Mennesker med behov får en
+                lønn
+              </div>
+              <div class="how-it-works-step how-it-works-last">
+                <img src="assets/step4.png" /> 4. Transparens - Se effekten av
+                ditt bidrag
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-12">
+            <div class="preview-container">
+              <div class="preview-text">Et gavekort med mening</div>
+              <div class="preview-image"><img src="assets/gavekort.png" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-12 footer-column">
+              Empower c/o The Factory<br>
+              Nedre Vollgate 3, 0158 Oslo<br>
+              hi@empower.eco
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-page>

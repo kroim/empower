@@ -1,0 +1,10 @@
+<div>
+    <h2>add waste station</h2>
+    <input type="text" placeholder="Public Key" [(ngModel)]="publicKey">
+    <input type="text" placeholder="Email" [(ngModel)]="email">
+    <input type="text" placeholder="Description" [(ngModel)]="description">
+    <input type="text" placeholder="Latitude" [(ngModel)]="location.lat">
+    <input type="text" placeholder="Longitude" [(ngModel)]="location.lng">
+    <input type="number" placeholder="Daily Limitation (kg)" [(ngModel)]="dailyLimitation">
+    <button (click)="addWasteStation()">Add Waste Station</button>
+</div>

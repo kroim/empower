@@ -1,0 +1,73 @@
+@import "../../../variables.scss";
+
+app-page {
+  margin-top: 80px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+  }
+}
+
+.content-container {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 25px 70px 50px 70px;
+
+  @media screen and (max-width: 900px) {
+    padding: 25px 60px 50px 60px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 25px 40px 40px 40px;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding: 25px 25px 30px 25px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 15px 10px 15px 10px;
+  }
+}
+
+.excerpt-column {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.blog-header {
+  text-align: center;
+
+  h1 {
+    font-size: 40pt;
+    color: $light-green;
+
+    @media screen and (max-width: 650px) {
+      font-size: 35pt;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 25pt;
+    }
+  }
+
+  .blog-header-text {
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    max-width: 400px;
+  }
+}
+
+app-blog-excerpt {
+  display: block;
+  margin-top: 40px;
+  height: calc(100% - 50px);
+
+  @media screen and (max-width: 600px) {
+    margin-top: 25px;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-top: 20px;
+  }
+}

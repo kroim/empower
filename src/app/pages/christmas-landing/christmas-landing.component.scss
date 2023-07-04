@@ -1,0 +1,317 @@
+@import "../../../variables.scss";
+
+app-page {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #fff;
+  color: $light-green;
+  font-family: "HK Kontrast";
+}
+
+.col-12 {
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: 1200px) {
+    padding-left: calc((100% - 1200px + 20px) / 2);
+    padding-right: calc((100% - 1200px + 20px) / 2);
+  }
+}
+
+.logo-container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.logo-img {
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  color: $light-green;
+}
+
+.bottom-header-text {
+  font-size: 50pt;
+}
+
+.header-column {
+  text-align: center;
+}
+
+.subheader-text {
+  font-family: "HK Kontrast";
+  font-size: 14pt;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.supernisse {
+  width: 100%;
+}
+
+.supernisse-small {
+  height: 130px;
+  display: block;
+  display: none;
+}
+
+.gift-block {
+  background-color: $light-green;
+  color: #fff;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gift-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  padding-left: 10px;
+}
+
+.gavekort-header {
+  font-size: 18pt;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.gavekort-subheader {
+  font-size: 18pt;
+  font-family: 'HK Grotesk';
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.gavekort-explainer {
+  text-align: left;
+  font-size: 10pt;
+  font-weight: 500;
+  font-family: 'HK Grotesk';
+}
+
+.buy-button {
+  background-color: #F44436;
+  width: 120px;
+  max-width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.preview-container {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.preview-text {
+  font-family: "HK Kontrast";
+  font-size: 24pt;
+  color: $light-green;
+  margin-right: 20px;
+}
+
+.preview-image {
+  width: 250px;
+
+  img {
+    width: 100%;
+  }
+}
+.change-amount-button {
+  color: #fff;
+  border: solid 2px #fff;
+  height: 22px;
+  width: 22px;
+  padding: 0;
+  margin-left: 2px;
+  margin-right: 2px;
+  line-height: 1.3;
+}
+
+.custom-amount-container {
+  display: flex;
+  align-items: center;
+  font-size: 12pt;
+  margin-left: 1px;
+}
+
+.customer-gavekort-subheader {
+  display: flex;
+}
+
+ul li, ol li {
+  margin-top: 0.2rem;
+}
+
+.custom-amount-text {
+  background-color: #fff;
+  color: $light-green;
+  display: inline-block;
+  height: 22px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.how-it-works-container {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+.how-it-works-header {
+  font-size: 24pt;
+}
+
+.how-it-works-step-last {
+  margin-top: 10px;
+}
+
+.how-it-works-step {
+  font-family: 'HK Grotesk';
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 11pt;
+  font-weight: 600;
+  width: 200px;
+
+  img {
+    height: 80px;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footer-column {
+  text-align: center;
+  font-family: 'HK Grotesk';
+  font-size: 10pt;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .gavekort-subheader {
+    font-size: 15pt;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .gavekort-subheader {
+    font-size: 14pt;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .supernisse-column {
+    display: none;
+  }
+
+  .supernisse-small {
+    display: block;
+  }
+
+  .header-column {
+      width: 100%;
+  }
+
+  .header-container {
+    text-align: left;
+
+    h1 {
+      padding-left: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 30pt;
+  }
+
+  .bottom-header-text {
+    font-size: 30pt;
+  }
+}
+
+@media screen and (max-width: 650px) { 
+  .how-it-works-container {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .how-it-works-header, .how-it-works-step {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) { 
+  .gift-choice-columns {
+    flex-direction: column;
+  }
+
+  .gift-choice-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .gift-block {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 240px;
+  }
+}
+
+@media screen and (max-width: 450px) { 
+  h1 {
+    font-size: 24pt;
+  }
+
+  .bottom-header-text {
+    font-size: 24pt;
+  }
+
+  .subheader-text {
+    font-size: 12pt;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 450px) { 
+.christmas-landing-page-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+}

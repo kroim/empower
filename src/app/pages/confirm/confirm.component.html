@@ -1,0 +1,28 @@
+<app-page>
+  <div class="container">
+    <div class="columns">
+      <div class="column col-12 col-content">
+        <h1 class="confirm-header">
+          <div *ngIf="!comingFromEmail" class="confirm-header">
+            Check your email for a confirmation code
+          </div>
+          <div *ngIf="comingFromEmail" class="confirm-header">
+            We will verify your email now!
+          </div>
+        </h1>
+
+        <div *ngIf="!comingFromEmail" class="confirm-text">
+          We just need to verify your email.
+          <br> Paste the code from the email into the form below
+          <br> or click the link in the email.
+        </div>
+        <input type="text" [(ngModel)]="confirmCode" placeholder="Confirmation Code" name="email">
+        <button [disabled]="confirmCode === ''" (click)="confirm()" class="confirm-button">Confirm Email</button>
+        <br>
+        <div *ngIf="error !== ''">
+          Something went wrong: {{error}}
+        </div>
+      </div>
+    </div>
+  </div>
+</app-page>

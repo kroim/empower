@@ -1,0 +1,147 @@
+<app-page>
+  <div class="columns">
+    <div class="column christmas-landing-page-container col-12">
+      <div class="logo-container">
+        <img class="logo-img" src="assets/empowergreenlogowithtext.png" />
+      </div>
+      <div class="container">
+        <div class="columns">
+          <div class="column col-4 supernisse-column">
+            <img class="supernisse" src="assets/Empower-supernisse_v01.png" />
+          </div>
+          <div class="column header-column col-8">
+            <div class="header-container">
+              <img
+                class="supernisse-small"
+                src="assets/Empower-supernisse_v01.png"
+              />
+              <h1>
+                <span class="top-header-text">Be a</span><br /><span
+                  class="bottom-header-text"
+                  >super santa<br>this year!</span
+                >
+              </h1>
+            </div>
+
+            <div class="subheader-text">
+              For every dollar, one kilo of plastic waste is cleaned up all over the world.
+Contribute to a cleaner planet and earnings for people in need.
+            </div>
+            <div class="container">
+              <div class="columns gift-choice-columns">
+                <div class="column gift-choice-column col-4">
+                  <div class="gift-block">
+                    <div class="gavekort-header">Gift card</div>
+                    <img class="gift-img" src="assets/1_30dollar_v01.png" />
+                    <div class="gavekort-subheader">6 months plastic positive</div>
+                    <div class="gavekort-explainer">
+                      <ul>
+                        <li>Cleans up 30 kilos of plastic waste</li>
+                        <li>Receive gift card complete with receiver name imediately in your email</li>
+                        <li>See the effect of your contribution</li>
+                      </ul>
+                    </div>
+                    <button
+                      class="buy-button"
+                      (click)="selectChristmasCard30()"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                </div>
+                <div class="column gift-choice-column col-4">
+                  <div class="gift-block">
+                    <div class="gavekort-header">Gift card</div>
+                    <img class="gift-img" src="assets/2_60dollar_v01.png" />
+
+                    <div class="gavekort-subheader">12 months plastic positive</div>
+                    <div class="gavekort-explainer">
+                      <ul>
+                        <li>Cleans up 60 kilos of plastic waste</li>
+                        <li>Receive gift card complete with receiver name imediately on your email</li>
+                        <li>See the effect of your contribution</li>
+                      </ul>
+                    </div>
+                    <button
+                      class="buy-button"
+                      (click)="selectChristmasCard60()"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                </div>
+                <div class="column gift-choice-column col-4">
+                  <div class="gift-block">
+                    <div class="gavekort-header">Gift card</div>
+                    <img class="gift-img" src="assets/3_valgfri_v01_eng.png" />
+                    <div class="gavekort-subheader customer-gavekort-subheader">
+                      Choose amount
+                      <div class="custom-amount-container">
+                          <button (click)="decrease()" class="change-amount-button">
+                              -
+                            </button>
+                            <div class="custom-amount-text">${{ customAmount }}</div>
+                            <button (click)="increase()" class="change-amount-button">
+                              +
+                            </button>
+                        </div>
+                     
+                    </div>
+                    <div class="gavekort-explainer">
+                      <ul>
+                          <li>Cleans up <b>{{ customAmount }}</b> kilos of plastic waste</li>
+                          <li>Receive gift card complete with receiver name imediately on your email</li>
+                          <li>See the effect of your contribution</li>
+                      </ul>
+                    </div>
+                    
+                    <button
+                      class="buy-button"
+                      (click)="selectChristmasCardCustom()"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-12">
+            <div class="how-it-works-container">
+              <div class="how-it-works-header">This is how it works</div>
+              <div class="how-it-works-step">
+                <img src="assets/step1.png" /> 1.  Contribution makes cleanups possible all over the world
+              </div>
+              <div class="how-it-works-step">
+                <img src="assets/step2.png" /> 2. Plastic waste cleaned up and delivered at certified collection points
+              </div>
+              <div class="how-it-works-step">
+                <img src="assets/step3.png" /> 3. People in need get paid for the plastic waste
+              </div>
+              <div class="how-it-works-step how-it-works-last">
+                <img src="assets/step4.png" /> 4. Transparency - see your impact
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-12">
+            <div class="preview-container">
+              <div class="preview-text">A gift card with meaning</div>
+              <div class="preview-image"><img src="assets/gavekort_eng.png" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-12 footer-column">
+              Empower c/o The Factory<br>
+              Nedre Vollgate 3, 0158 Oslo<br>
+              hi@empower.eco
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-page>

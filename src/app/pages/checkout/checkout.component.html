@@ -1,0 +1,148 @@
+<app-page>
+  <ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>
+
+  <div class="columns">
+    <div *ngIf="!productHasBeenSelected()" class="column col-checkout-content col-green col-12 col-content">
+      <app-sponsor [main]="true" (onGo)="dataChanged($event)"></app-sponsor>
+    </div>
+    <div *ngIf="productHasBeenSelected()" class="column col-checkout-content col-12 col-content">
+      <div class="checkout-content-container">
+        <h1>checkout</h1>
+        <div class="order-details">
+          <div class="container">
+            <div class="columns">
+              <div class="column col-6 order-header">
+                Product
+              </div>
+              <div class="column col-6 order-header">
+                Total
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column col-6">
+                {{ getProduct().text }}
+              </div>
+              <div class="column col-6">
+                {{ getTotal().currency }} {{ getTotal().amount }}
+              </div>
+            </div>
+          </div>
+          <!--<input [(ngModel)]="isGift" type="checkbox" name="gift-check">
+          <label for="gift-check"> Buy as a gift</label>-->
+          <div *ngIf="isGift">
+            <br>
+            <label for="gift-name">Name of recipient (optional)</label>
+            <input type="text" name="gift-name" [(ngModel)]="giftName">
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="columns">
+            <div class="column col-user-info col-sm-12">
+              Please fill out:
+              <div class="container">
+                <div class="columns">
+                  <div class="column col-6">
+                    <input [disabled]="firstNameFromUser" [(ngModel)]="firstName" type="text" placeholder="First Name">
+                  </div>
+                  <div class="column col-6">
+                    <input [disabled]="lastNameFromUser" [(ngModel)]="lastName" type="text" placeholder="Last Name">
+                  </div>
+                </div>
+                <div class="columns country-container">
+                  <div class="column col-12">
+                    <select [disabled]="countryFromUser" [(ngModel)]="country" placeholder="Country">
+                      <option value="" disabled selected>Select Country</option>
+                      <option *ngFor="let country of countries" [value]="country.code">{{country.name}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column col-12">
+                    <input [disabled]="emailFromUser" [(ngModel)]="email" type="email" placeholder="E-mail">
+                  </div>
+                </div>
+                <div *ngIf="!isLoggedIn" class="columns">
+                  <div class="column col-12">
+                    <input [(ngModel)]="password" type="password" placeholder="New Password">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column col-sm-12">
+              <div class="login-container" *ngIf="isLoggedIn">
+                You are already logged in. Great!
+              </div>
+              <div class="login-container" *ngIf="!isLoggedIn">
+                Already got a user? If not we will register one when you complete the purchase.
+                <br>
+                <button class="login-button" (click)="logIn()">Log in here</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-details">
+          <div class="container">
+            <div class="columns">
+              <div class="column col-12-no-pad col-12 order-header">
+                Select Payment Method
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column col-12-no-pad col-12">
+                <div class="form-group">
+                  <label class="form-radio">
+                    <input (click)="choose($event['target']['value'])" type="radio" name="subscription" value="creditcard">
+                    <i class="form-icon"></i> Credit Card
+                    <span class="payment-icons">
+                      <img class="payment-icon" src="assets/checkout/visa.png">
+                      <img class="payment-icon" src="assets/checkout/mastercard.png">
+                      <img class="payment-icon" src="assets/checkout/discover.png">
+                      <img class="payment-icon" src="assets/checkout/americanexpress.png">
+                      <img class="payment-icon" src="assets/checkout/dinersclub.png">
+                    </span>
+
+                  </label>
+                  <div [hidden]="paymentOption !== 'creditcard'">
+                    <input class="credit-card-name" [(ngModel)]="creditCardName" type="text" placeholder="Credit Card Full Name">
+                    <div id="card-element" #cardElement>
+                      <!-- A Stripe Element will be inserted here. -->
+                    </div>
+                    <div id="card-errors" *ngIf="error">{{ error }}</div>
+                    <br>
+                  </div>
+                  <label *ngIf="this.type === 'onetime'" class="form-radio">
+                    <input (click)="choose($event['target']['value'])" type="radio" name="subscription" value="coingate">
+                    <i class="form-icon"></i> Coingate - Pay with one of over 50 different cryptocurrencies
+                    <img class="payment-icon" src="assets/checkout/crypto.png">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="serverError" class="validation-error">
+          Something went wrong:
+          <br>{{serverError}}
+        </div>
+
+        <div *ngIf="missingFields.length > 0" class="validation-error">
+          The following fields are required:
+          <ul>
+            <li *ngFor="let missingField of missingFields">{{missingField}}</li>
+          </ul>
+        </div>
+
+        <div class="purchase-container">
+          <div *ngIf="!isSubscribedToNewsletter">
+            <input type="checkbox" [(ngModel)]="newsletter" name="newsletter">
+            <label for="newsletter">Subscribe to our Newsletter</label>
+          </div>
+          <button (click)="purchase()" class="purchase-button">Purchase</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-page>
