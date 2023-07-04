@@ -1,0 +1,54 @@
+@import "../../../variables.scss";
+
+app-page {
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+  }
+}
+
+.share-header {
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'HK Grotesk';
+  font-weight: 800;
+  font-size: 18pt;
+  color: $dark-green;
+  text-transform: uppercase;
+}
+
+.share-text {
+  width: 60%;
+  min-width: 300px;
+  padding: 30px;
+  background: rgba(255,255,255,0.4);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 12pt;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 10px 10px;
+  text-align: left;
+  padding-left: 60px;
+}
+
+.share-fb-button {
+  background-image: url("../../../assets/facebook.png");
+}
+
+.share-twitter-button {
+  margin-left: 20px;
+  background-image: url("../../../assets/twitter.png");
+
+  @media screen and (max-width: 470px) {
+    margin-left: 0;
+  }
+}

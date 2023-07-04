@@ -1,0 +1,313 @@
+@import "../../../variables.scss";
+
+app-page {
+  margin-top: 0;
+}
+
+hr {
+  background-color: $dark-green;
+  border-color: $dark-green;
+  color: $dark-green;
+  border-style: solid;
+}
+
+.col-12 {
+  padding-left: 0;
+  padding-right: 0;
+
+  @media screen and (min-width: 1200px) {
+    padding-left: calc((100% - 1200px + 20px) / 2);
+    padding-right: calc((100% - 1200px + 20px) / 2);
+  }
+}
+
+.hero-container {
+  background-image: url("../../../assets/subscription-background.jpg");
+  background-size: cover;
+  padding-top: 60px;
+
+  @media screen and (max-width: 790px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 32pt;
+    }
+
+    .subtitle {
+      font-size: 13pt;
+    }
+  }
+
+  @media screen and (max-width: 340px) {
+    h1 {
+      font-size: 28pt;
+    }
+  }
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 40pt;
+  text-transform: lowercase;
+  color: $light-green;
+}
+
+.subtitle {
+  text-align: center;
+  color: #fff;
+  font-size: 14pt;
+  font-family: "HK Grotesk";
+}
+
+.landing-page-content-container {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 50px 70px 50px 70px;
+
+  @media screen and (max-width: 1200px) {
+    padding: 50px 60px 50px 60px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding: 40px 40px 40px 40px;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding: 30px 25px 30px 25px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 30px 10px 30px 10px;
+  }
+
+}
+
+.checkbox-line {
+  display: flex;
+}
+
+.checkbox-img {
+  width: 50px;
+  height: 50px;
+}
+
+.checkbox-title {
+  font-size: 18pt;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+
+.checkbox-text {
+  padding-left: 60px;
+  margin-top: 6px;
+  margin-bottom: 30px;
+}
+
+.main-cta-header {
+  text-transform: lowercase;
+  font-size: 22pt;
+  text-align: center;
+  color: $dark-green;
+}
+
+.call-to-action {
+  background-color: $light-green;
+  color: #fff;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px 40px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  .cta-header {
+    text-transform: uppercase;
+    font-size: 18pt;
+    font-weight: 500;
+  }
+
+  .cta-badge {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .cta-text {
+    font-size: 13pt;
+  }
+
+  .cta-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 15pt;
+    background-color: $peach;
+    color: #fff;
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-top: 20px;
+  }
+
+  .cta-button:hover {
+    color: #fff;
+    background-color: $peach;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.space-columns {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.independent-quote {
+  text-align: center;
+  color: $light-green;
+  font-family: "HK Kontrast";
+  font-size: 20pt;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .independent-logo {
+    width: 300px;
+    max-width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.explainer-header {
+    color: $dark-blue;
+    font-size: 36pt;
+    margin-bottom: 35px;
+    line-height: 1;
+  
+    @media screen and (max-width: 700px) {
+      font-size: 30pt;
+    }
+  
+    @media screen and (max-width: 600px) {
+      font-size: 28pt;
+    }
+  
+    @media screen and (max-width: 500px) {
+      font-size: 26pt;
+    }
+  
+    @media screen and (max-width: 400px) {
+      font-size: 22pt;
+    }
+}
+
+.explainer-container {
+    background-color: #fff;
+    color: $dark-blue;
+    padding: 45px 45px 20px 45px;
+    margin-top: 70px;
+    margin-left: -100px;
+    margin-right: 17px;
+
+    @media screen and (max-width: 840px) {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+    }
+}
+
+.explainer-text-hightlight {
+  font-size: 15pt;
+  font-weight: 500;
+}
+
+.plastic-waste {
+  width: 115%;
+  margin-left: 17px;
+  @media screen and (max-width: 840px) {
+    display: none;
+  }
+}
+
+.explainer-column {
+  padding: 25px;
+
+  @media screen and (max-width: 840px) {
+    padding: 0;
+  }
+}
+
+.support-now-column {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.support-now-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    font-size: 15pt;
+    background-color: $peach;
+    color: #fff;
+    width: 300px;
+    max-width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.support-now-button:hover {
+    color: #fff;
+    background-color: $peach;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.how-it-works-header {
+    text-align: center;
+    font-size: 36pt;
+    color: $dark-green;
+}
+
+.step-container {
+    text-align: center;
+  margin-top: 20px;
+  img.explainer-icon {
+    width: 50%;
+  }
+
+  h3 {
+    color: #fff;
+    font-family: "HK Grotesk";
+    text-transform: uppercase;
+    font-size: 12pt;
+  }
+}
+
+.subscribe-header {
+  text-align: center;
+  color: $light-green;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  margin-left: 60px;
+  font-size: 36pt;
+
+  @media screen and (max-width: 840px) {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 690px) {
+    font-size: 30pt;
+  }
+}

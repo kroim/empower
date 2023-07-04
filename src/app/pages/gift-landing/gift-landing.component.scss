@@ -1,0 +1,50 @@
+app-page {
+    display: block;
+    margin-top: 75px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.support-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 16pt;
+}
+
+.hexagon {
+    position: relative;
+    width: 226px; 
+    height: 130px;
+    background-color: #fff;
+    margin: 86.60px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 113px solid transparent;
+    border-right: 113px solid transparent;
+  }
+  
+  .hexagon:before {
+    bottom: 100%;
+    border-bottom: 65px solid #fff;
+  }
+  
+  .hexagon:after {
+    top: 100%;
+    left: 0;
+    width: 0;
+    border-top: 65px solid #fff;
+  }

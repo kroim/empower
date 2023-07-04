@@ -1,0 +1,32 @@
+@import "../../../variables.scss";
+
+app-page {
+  margin-top: 70px;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+  }
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: "HK Grotesk";
+  color: $dark-green;
+}
+
+h1 {
+  color: $peach;
+  text-transform: lowercase;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 360px) {
+  .privacy-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

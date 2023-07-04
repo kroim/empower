@@ -1,0 +1,45 @@
+@import "../../../variables.scss";
+
+app-page {
+  margin-top: 70px;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+  }
+}
+
+.question-answer {
+  display: none;
+}
+
+.question-answer.show {
+  display: block;
+}
+ 
+h2.sign::before{
+   content: '+ ';
+ }
+ 
+h2.sign.replaced::before{
+   content: '- ';
+ }
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'HK Grotesk';
+  font-size: 16pt;
+  color: $dark-green;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 360px) {
+  .faq-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

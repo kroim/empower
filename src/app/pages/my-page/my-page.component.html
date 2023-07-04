@@ -1,0 +1,220 @@
+<app-page>
+  <ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>
+
+  <div class="columns">
+    <div class="column col-12 my-page-container">
+      <div class="content-container">
+        <h1>
+          <div class="my-page-header">hi there{{ firstName ? ', ' + firstName : ''}}</div>
+        </h1>
+
+        <h3>info</h3>
+        <div class="container">
+          <div class="columns">
+            <div class="column col-sm-12 col-6">
+              <div class="container">
+                <div class="columns profile-columns">
+                  <div class="column col-6">
+                    <b>E-Mail</b>
+                  </div>
+                  <div class="column col-6">
+                    {{email}}
+                  </div>
+                </div>
+                <div class="columns profile-columns">
+                  <div class="column col-6">
+                    <b>First Name</b>
+                  </div>
+                  <div class="column col-6">
+                    <div *ngIf="profileEditMode">
+                      <input type="text" [(ngModel)]="editFirstName">
+                    </div>
+                    <div *ngIf="!profileEditMode">
+                      {{firstName}}
+                    </div>
+
+                  </div>
+                </div>
+                <div class="columns profile-columns">
+                  <div class="column col-6">
+                    <b>Last Name</b>
+                  </div>
+                  <div class="column col-6">
+                    <div *ngIf="profileEditMode">
+                      <input type="text" [(ngModel)]="editLastName">
+                    </div>
+                    <div *ngIf="!profileEditMode">
+                      {{lastName}}
+                    </div>
+
+                  </div>
+                </div>
+                <div class="columns profile-columns">
+                  <div class="column col-6">
+                    <b>Country</b>
+                  </div>
+                  <div class="column col-6">
+                    <div *ngIf="profileEditMode">
+                      <select [(ngModel)]="editCountry" placeholder="Country">
+                        <option value="" disabled selected>Select Country</option>
+                        <option *ngFor="let country of countries" [value]="country.code">{{country.name}}</option>
+                      </select>
+                    </div>
+                    <div *ngIf="!profileEditMode">
+                      {{country}}
+                    </div>
+
+                  </div>
+                </div>
+                <div *ngIf="profileEditMode" class="columns profile-columns">
+                  <div class="column col-12">
+                    <div *ngIf="editError">
+                      Something went wrong: {{editError}}
+                    </div>
+                    <button class="save-button" (click)="saveEdit()">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column col-sm-12 col-6">
+              <div class="profile-button-container">
+                <button (click)="changePassword()">Change Password</button>
+                <button (click)="edit()">Edit Info</button>
+                <button (click)="logout()">Log out</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <app-ambassador-info *ngIf="isAmbassador" [profileImage]="profileImage"
+          [ambassador]="ambassador"></app-ambassador-info>
+
+        <div class="user-cleaning-stats-container">
+          <div class="before">
+            You personally have funded the cleanup of
+          </div>
+          <div class="main">
+            {{userTotal}} kg
+          </div>
+          <div class="after">
+            of plastic waste!
+          </div>
+          <div [hidden]="!(impacts.length > 0)" class="impact-map">
+            <div #impactmap style="width:100%;height:400px"></div>
+          </div>
+        </div>
+
+        <h3>orders</h3>
+        <p *ngIf="orders.orderList.length > 0">
+          Note: For PayPal Subscriptions you need to go to PayPal.com to make any changes
+          <br> To change other types of Subscriptions, please contact us at support@empower.eco
+        </p>
+        <p *ngIf="orders.orderList.length === 0">
+          Do you want to help us rid the world of plastic waste?
+          <br>
+          <button class="buy-button" (click)="buy()">Join the plastic waste movement</button>
+        </p>
+        <div class="container single-order-container" *ngFor="let sub of orders.orderList">
+          <div class="columns">
+            <div class="column col-6">
+              <b>Order Type</b>
+            </div>
+            <div class="column col-6">
+              {{sub.type === 'subscription' ? 'Empower Monthly Sponsorship' : 'One Time Sponsorship'}} {{sub.isGift ?
+              '
+              as Gift' : ''}}
+            </div>
+          </div>
+          <div *ngIf="sub.isGift" class="columns">
+            <div class="column col-6">
+              <b>Has been redeemed</b>
+            </div>
+            <div class="column col-6">
+              {{sub.redeemed ? 'Yes' : 'Not yet'}}
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column col-6">
+              <b>Payment Type</b>
+            </div>
+            <div class="column col-6">
+              {{ sub.paymentOption === "stripe" ? "Credit Card" : sub.paymentOption }}
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column col-6">
+              <b>Amount</b>
+            </div>
+            <div class="column col-6">
+              ${{sub.amount}} {{sub.type === 'subscription' ? 'every month' : 'once'}}
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column col-6">
+              <b>Status</b>
+            </div>
+            <div class="column col-6">
+              <span *ngIf="sub.completed">Activated</span>
+              <span *ngIf="!sub.completed">Not Activated Yet</span>
+              <span *ngIf="!sub.completed && sub.redirect">
+                <br>
+                <a [attr.href]="sub.redirect">Click Here To Activate</a>
+              </span>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column col-6">
+              <b>Date</b>
+            </div>
+            <div class="column col-6">
+              {{sub.date | date}}
+            </div>
+          </div>
+          <div *ngIf="sub.isGift" class="columns">
+            <div class="column button-column col-12">
+              <button (click)="downloadGiftCard(sub.id)" *ngIf="sub.isGift">Download Giftcard</button>
+            </div>
+          </div>
+        </div>
+
+        <h3>gifts</h3>
+        <div class="container single-order-container" *ngFor="let sub of orders.giftList">
+          <div class="columns">
+            <div class="column col-6">
+              <b>Gift Type</b>
+            </div>
+            <div class="column col-6">
+              {{sub.type === 'subscription' ? 'Empower Monthly Sponsorship' : 'One Time Sponsorship'}}
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column col-6">
+              <b>Amount</b>
+            </div>
+            <div class="column col-6">
+              {{sub.amount}} kg {{sub.type === 'subscription' ? 'every month' : 'once'}}
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column col-6">
+              <b>Status</b>
+            </div>
+            <div class="column col-6">
+              <span *ngIf="sub.completed">Active</span>
+              <span *ngIf="!sub.completed">Not Active Yet</span>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column col-6">
+              <b>Active from</b>
+            </div>
+            <div class="column col-6">
+              {{sub.date | date}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</app-page>

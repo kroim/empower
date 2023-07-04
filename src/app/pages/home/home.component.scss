@@ -1,0 +1,169 @@
+@import "../../../variables.scss";
+
+app-page {
+  margin-top: 80px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+  }
+}
+
+.header-image {
+  width: 100%;
+}
+
+.big-header {
+  font-family: "HK Kontrast";
+  font-size: 59pt;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  padding: 15px 0 0 70px;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 50pt;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 40pt;
+    padding: 10px 0 0 40px;
+  }
+
+  @media screen and (max-width: 750px) {
+    padding: 10px 0 0 0;
+  }
+}
+
+.about-box {
+  background-color: #fff;
+  padding: 45px;
+  margin-left: -100px;
+  margin-top: 40px;
+  position: relative;
+  font-size: 13pt;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 12pt;
+  }
+
+  @media screen and (max-width: 900px) {
+    margin-top: 30px;
+  }
+}
+
+.call-to-action-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-left: -50px;
+
+  .call-to-action-button {
+    font-weight: 600;
+    font-size: 15pt;
+    background-color: $peach;
+    color: #fff;
+    padding: 18px 20px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.14), 0 3px 5px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  .call-to-action-button:hover {
+    color: #fff;
+    background-color: $peach;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+}
+
+.about-link {
+  text-transform: uppercase;
+  border-bottom: solid;
+  font-size: 10pt;
+  position: absolute;
+  bottom: 14px;
+  right: 22px;
+  font-weight: 600;
+}
+
+.about-content {
+  padding: 50px 400px 0 400px;
+  font-size: 15pt;
+}
+
+.how-it-works-container {
+  margin-bottom: 25px;
+}
+
+.stats-container {
+  margin-top: 25px;
+}
+
+.explainer-text {
+  text-align: center;
+  font-size: 16pt;
+}
+
+@media screen and (max-width: 750px) {
+  .plastic-movement-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding-bottom: 25px;
+    position: relative;
+  }
+
+  .plastic-movement-container::after {
+    content: "";
+    background-image: url("../../../assets/palett.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .call-to-action-container {
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 0;
+  
+    .call-to-action-button {
+      background-color: $peach;
+      color: #fff;
+    }
+
+    .call-to-action-button:hover {
+      background-color: #fff;
+      color: $peach;
+    }
+  }
+
+  .big-header {
+    text-align: center;
+  }
+
+  .header-image-container {
+    display: none;
+  }
+
+  .about-box {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .big-header {
+    padding-top: 40px;
+  }
+
+  .about-box {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about-box {
+    padding: 25px 25px 40px 25px;
+  }
+}

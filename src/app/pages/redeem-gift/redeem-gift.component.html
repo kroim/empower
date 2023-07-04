@@ -1,0 +1,19 @@
+<app-page>
+  <ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>
+
+  <div class="columns">
+    <div class="column col-12 redeem-gift-container">
+      <h1 class="redeem-header">Redeem gift</h1>
+      <div class="sub-text">
+        Enter the redeem gift code you got below:
+      </div>
+      <input type="text" [(ngModel)]="code">
+      <button [disabled]="code === ''" class="redeem-button" (click)="redeem()">Redeem Gift</button>
+
+      <div *ngIf="error">
+          Something went wrong: {{error}}
+        </div>
+    </div>
+  </div>
+
+</app-page>

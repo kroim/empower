@@ -1,0 +1,71 @@
+<div class="user-details">
+  <ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>
+
+  <h2 class="ambassador-header">You're an ambassador!</h2>
+  <div class="container">
+    <div class="columns">
+      <div class="column col-6 col-sm-12">
+        <img *ngIf="!profileImage" src="assets/placeholder-profile.png" class="profile-image">
+        <img *ngIf="profileImage" [src]="profileImage" class="profile-image">
+      </div>
+      <div class="column top-padded-column col-6 col-sm-12">
+        <input *ngIf="editMode" type="file" (change)="onChange($event)">
+        <div class="container">
+          <div class="columns">
+            <div class="column col-12">
+              <b>Who are you?</b>
+              <br>
+              <div *ngIf="editMode">
+                <input type="text" [(ngModel)]="ambassador.who">
+              </div>
+              <div *ngIf="!editMode">
+                {{ambassador.who}}
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column col-12">
+              <b>Why do you care about the plastic problem?</b>
+              <br>
+              <div *ngIf="editMode">
+                <input type="text" [(ngModel)]="ambassador.whyPlastic">
+              </div>
+              <div *ngIf="!editMode">
+                {{ambassador.whyPlastic}}
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column col-12">
+              <b>What do you like about Empower?</b>
+              <br>
+              <div *ngIf="editMode">
+                <input type="text" [(ngModel)]="ambassador.whyEmpower">
+              </div>
+              <div *ngIf="!editMode">
+                {{ambassador.whyEmpower}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns map-columns">
+      <div class="column col-12">
+        <h4 class="map-header">Your location</h4>
+        <br>
+        Click the edit button below to select your own location.
+        <br>
+        <div [hidden]="!editMode">
+          <div #gmapedit style="width:100%;height:400px"></div>
+        </div>
+        <div [hidden]="editMode">
+          <div #gmapshow style="width:100%;height:400px"></div>
+        </div>
+
+        <button *ngIf="!editMode" (click)="edit()">Edit</button>
+        <button *ngIf="editMode" (click)="save()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

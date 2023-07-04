@@ -1,0 +1,24 @@
+<app-page>
+  <div class="columns">
+    <div class="column col-12 register-container">
+      <h1 class="register-header">
+        Register new account
+      </h1>
+      <input type="email" [(ngModel)]="email" placeholder="E-mail" name="email">
+      <br>
+      <input type="password" [(ngModel)]="password" placeholder="Password" name="password">
+      <input type="password" [(ngModel)]="repeatPassword" placeholder="Repeat Password" name="repeatPassword">
+      <div>
+        <label class="checkbox-label"><input type="checkbox" [(ngModel)]="newsletter" name="newsletter"> Subscribe to
+          our
+          Newsletter</label>
+      </div>
+      <button class="register-button" [disabled]="email === '' || password === '' || repeatPassword === ''" (click)="register()">Register</button>
+      <br>
+      <div *ngIf="error !== ''">
+        Something went wrong: {{error}}
+      </div>
+    </div>
+  </div>
+
+</app-page>
