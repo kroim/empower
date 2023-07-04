@@ -1,0 +1,28 @@
+<div  class="container">
+  <div class="new-login">
+    <div class="new-login-header">
+      <div class="login-icon">
+        <img src="../../../assets/new-pages/hand.png">
+      </div>
+      <h1>Log in</h1>
+    </div>
+
+    <div class="new-login-content">
+      <form (ngSubmit)="new_login()">
+        <div class="form-group">
+          <label class="login-error">{{ error }}</label>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="email" [(ngModel)]="email" placeholder="Useremail" name="email">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="password" [(ngModel)]="password" placeholder="Password" name="password">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-info btn-lg btn-block">Log in</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

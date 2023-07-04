@@ -1,0 +1,83 @@
+<div class="new-home-content">
+    <div id="new_home_start">
+        <div class="start-text">
+            <h1>Become plastic positive</h1>
+            <p>Empower is creating a solution to the plastic waste problem by giving plastic a value.</p>
+            <p>We are cleaning up the world while fighting poverty by providing a wage to those in need.</p>
+            <button class="btn btn-success btn-lg" type="button" (click)="scrollMove('how_it_works')">Find out how</button>
+        </div>
+    </div>
+    <div class="container">
+        <div id="how_it_works">
+            <div class="home-content-text">
+                <h1>How it works</h1>
+                <p>Our solution is based on the philosophy and success of the Norwegian bottle recycling system (which ensures 97% of bottles being recycled). This turns
+                    the
+                    return rate of plastic waste upside down. By giving plastic a value we incentivize people to clean it up and deposit the waste instead of throwing it
+                    in
+                    nature.</p>
+                <p>Empower is creating a plastic waste fund. This is used to pay people who deliver plastic waste to our stations. For every kg of plastic delivered, the
+                    person
+                    is rewarded a digital EMP Token worth $1.</p>
+                <div class="home-anchor-tag">
+                    <a href="#">So... how can I help?</a>
+                </div>
+                <div class="home-arrow-down">
+                    <i class="fa fa-long-arrow-down"></i>
+                </div>
+            </div>
+        </div>
+        <div id="home_impact">
+            <div class="home-content-text">
+                <h1>Choose your impact</h1>
+                <p>Slide to your preferred amount, 1$ <i class="fa fa-long-arrow-right"></i> 1kg</p>
+
+                <div class="home_slider">
+                    <div class="home_range">
+                        <input type="range" [min]="sliderMin" [max]="sliderMax" [(ngModel)]="sliderValue" class="slider"
+                               id="home_slider_range" (ngModelChange)="control_slider_text()">
+                    </div>
+                    <div id="home_slider_value">{{sliderValue}}$</div>
+                </div>
+                <i class="fa fa-long-arrow-down" id="slider_down_arrow"></i>
+                <p>Removes {{sliderValue}}kg of plastic <i class="fa fa-arrow-right"></i> {{sliderValue}}$ / month</p>
+                <div class="buttons">
+                    <button class="btn btn-info btn-lg" (click)="openSubModal(homeM, 'gift')">Give as gift</button>
+                    <button class="btn btn-success btn-lg" (click)="openSubModal(homeM, 'sub')">Subscribe</button>
+                </div>
+                <div class="home-anchor-tag">
+                    <a href="#">Or...</a>
+                </div>
+                <div><i class="fa fa-long-arrow-down"></i></div>
+            </div>
+        </div>
+
+        <div id="home_ambassador">
+            <div class="home-content-text">
+                <h1>Become an ambassador</h1>
+                <p>Help us spread the word and get rewarded. If you are passionate about cleaning the world of plastic waste fighting poverty, become an ambassador.</p>
+
+                <div class="buttons">
+                    <button class="btn btn-success btn-lg">Apply now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #homeM>
+        <div class="modal-header">
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div *ngIf="checkoutDoneFlag">
+                <app-newcheckout-done [sending_params]="sending_params"></app-newcheckout-done>
+            </div>
+            <div *ngIf="!checkoutDoneFlag">
+                <app-newcheckout [params]="modal_params" (sending)="modalData($event)"></app-newcheckout>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
