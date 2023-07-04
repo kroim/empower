@@ -1,0 +1,71 @@
+<div class="new-header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-md">
+
+                    <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="navbar-link nav-home"><a (click)="goHome()">Home</a>
+                            </li>
+                            <li class="navbar-link"><a (click)="goTo('/blog')">Blog</a>
+                            </li>
+                            <li class="navbar-link"><a (click)="goTo('/about')">About Empower</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- The menu items -->
+                    <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="navbar-link"><a>Founded cleanup: {{total}} kg</a></li>
+                            <li class="navbar-link">
+                                <a *ngIf="!isLoggedIn" (click)="openHeaderModal(headerM, 'login')">Login <i class="fa fa-user-circle-o"></i></a>
+                                <a *ngIf="isLoggedIn" (click)="openHeaderModal(headerM, 'account')">{{first_name}} <i class="fa fa-user-circle-o"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a class="new-header-logo" (click)="goHome()">
+                        <img class="navigation-link" class="header-logo" src="assets/new-logo.png">
+                    </a>
+
+                    <button class="navbar-toggler mr-auto custom-toggler" type="button" data-toggle="collapse"
+                            (click)="isCollapsed= !isCollapsed">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #headerM>
+        <div class="modal-header">
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div *ngIf="headerModalType==='login'" class="auth-content">
+                <app-newlogin></app-newlogin>
+                <div class="login-bottom-text">
+                    <a href="javascript:;" (click)="openHeaderModal(headerM, 'forgot')">Forgot your password?</a>
+                    <p>If you don't have an account yet,
+                        <a href="javascript:;" (click)="openHeaderModal(headerM, 'register')">register here</a></p>
+                </div>
+            </div>
+            <div *ngIf="headerModalType==='register'" class="auth-content">
+                <app-newregister></app-newregister>
+                <div class="login-bottom-text">
+                    <p>If you have an account,
+                        <a href="javascript:;" (click)="openHeaderModal(headerM, 'login')">login here</a></p>
+                </div>
+            </div>
+            <div *ngIf="headerModalType==='forgot'" class="auth-content">
+                <app-newforgotpassword></app-newforgotpassword>
+            </div>
+            <div *ngIf="headerModalType==='account'"><app-newaccount></app-newaccount></div>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+    <div id="new_about_page">
+        <div class="image-section">
+            <img src="../../../assets/new-pages/about.png">
+        </div>
+        <div class="about-empower-section">
+            <h1>About empower</h1>
+            <div class="about-text">
+                <p>Based on the idea of using technology to enable a circular economy and create a cleaner and better
+                    world, Empower was founded in January 2018. We are building a global plastic waste ecosystem on the same
+                    philosophy as the Norwegian bottle deposit system.
+                    By rewarding deposit of plastic waste we can both stop leakage of plastic into the environment, and
+                    incentivise collection of leaked waste. The use of Blockchain technology ensures full transparency</p>
+
+                <p>#plasticwastemovement</p>
+            </div>
+        </div>
+        <div class="about-team-section">
+            <h1>The team</h1>
+            <p>We're a dedicated and versatile team sharing the same passion for the plastic waste problem and for this solution!
+             Since January 2018 we have kept expanding the team and the community, mainly based in Oslo, Norway but with ambassadors,
+             advisors, mentors and friends all around the World. <a>Join our team?</a></p>
+            <div class="row profile-row">
+                <div class="col-md-3 col-sm-6 col-12 profile-information" *ngFor="let profile_info of profile_infos; let i = index">
+                    <img class="profile-image" src="assets/team/{{profile_info.img}}">
+                    <div class="profile-description"><p><b>{{profile_info.name}}</b></p>
+                        <p>{{profile_info.role}}</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.new-footer-main {
+  background: white;
+}
+.modal-header {
+  border-bottom: none;
+  button {
+    outline: none;
+  }
+ }
+.new-footer-main>.container{
+  border-top: gray solid 2px;
+}
+.new-footer-content {
+  width: 100%;
+  padding: 3% 1%;
+}
+.new-footer-main h6 {
+  color: black;
+}
+.new-footer-main p {
+  color: black;
+  font-size: 14px;
+}
+.new-footer-main a {
+  color: black;
+  font-size: 14px;
+  padding-right: 5%;
+  cursor: pointer;
+}

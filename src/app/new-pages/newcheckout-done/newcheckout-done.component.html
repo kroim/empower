@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="new-checkout-done">
+
+        <div class="new-checkout-done-header">
+            <div class="checkout-done-icon">
+                <img src="assets/new-pages/smile.png">
+            </div>
+            <h1>Thank you for the order!</h1>
+        </div>
+
+        <div class="new-checkout-done-content">
+            <div class="new-checkout-done-item">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Thank you so much for supporting Empower in its mission to clean up all the plastic waste in the world</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-checkout-done-item" *ngIf="isGift">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Your gift card has been sent successfully.</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-done-share" *ngIf="!isGift">
+                <h3>SHARE YOUR CONTRIBUTION TO THE WORLD!</h3>
+                <div class="checkout-done-share-text">
+                    {{ shareText }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="new-footer-main">
+    <div class="container">
+        <div class="new-footer-content">
+            <div class="row">
+                <div class="col-md-12"><h6>Empower</h6></div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Nedre Vollgate 3 c/o The Factory</p>
+                            <p>0158 OSLO</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Phone: +47 986 66 491</p>
+                            <p>Email: hi@empower.eco</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="new-footer-items row">
+                        <div class="col-sm-7">
+                            <a href="javascript:;" (click)="openFooterModal(footerM, 'privacy')">Privacy</a>
+                            <a href="javascript:;" (click)="openFooterModal(footerM, 'faq')">FAQ</a>
+                            <a href="javascript:;">Mewsletter</a>
+                        </div>
+                        <div class="col-sm-5">
+                            <a href="#"><i class="fa fa-slack"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #footerM>
+        <div class="modal-header">
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div *ngIf="footerModalType==='privacy'"><app-newprivacy></app-newprivacy></div>
+            <div *ngIf="footerModalType==='faq'"><app-newfaq></app-newfaq></div>
+            <div *ngIf="footerModalType==='news'">Newsletter</div>
+        </div>
+    </ng-template>
+</div>
+

@@ -1,0 +1,91 @@
+.new-account {
+  .new-account-header {
+    text-align: center;
+    padding-bottom: 5%;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .new-account-content {
+    .account-group-item {
+      padding: 1% 0;
+    }
+    .group-header {
+      .anchor-edit {
+        float: right;
+      }
+      i {
+        width: 5%;
+      }
+      span {
+        width: 95%;
+      }
+    }
+    .group-item-content {
+      padding-left: 5%;
+
+      p {
+        padding: 1% 0;
+      }
+    }
+    #card_image {
+      height: 17px;
+      padding-left: 3%;
+    }
+    .row > div {
+      padding: 1%;
+    }
+    .row > div > div {
+      background: #f0f0f0;
+      border-radius: 3px;
+      display: flex;
+      float:none;
+      padding: 0 2%;
+      justify-content: flex-start;
+    }
+    .row div > label {
+      flex: auto;
+      width: auto;
+      align-self: center;
+      margin:0;
+      white-space: nowrap;
+    }
+    .row div > input {
+      flex: auto;
+      margin:0;
+      align-self: center;
+      background: transparent;
+      border:none;
+      outline:none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    .row div > select {
+      flex: auto;
+      margin:0;
+      align-self: center;
+      background: transparent;
+      border:none;
+      outline:none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    .order-header > div {
+      border-bottom: gray solid 1px;
+    }
+    .order-item {
+      font-size: 14px;
+      border-bottom: gray solid 1px;
+      padding: 1% 0;
+    }
+  }
+
+  .new-account-bottom {
+    padding: 5% 0;
+  }
+}

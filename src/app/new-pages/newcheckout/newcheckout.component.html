@@ -1,0 +1,84 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>
+<div class="container">
+    <div class="new-checkout">
+
+        <div class="new-checkout-header">
+            <div class="checkout-icon">
+                <img src="assets/new-pages/smile.png">
+            </div>
+            <h1>You decided to remove {{ amount }}kg of plastic ({{ amount }}$)
+                <span *ngIf="!isGift">per month</span><span *ngIf="isGift">at once</span></h1>
+        </div>
+
+        <div class="new-checkout-content">
+            <div class="new-checkout-item">
+                <div class="checkout-error">{{ error }}</div>
+                <div class="checkout-error">{{ serverError }}</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>
+                            <label>First name: </label>
+                            <input class="form-control" [(ngModel)]="firstName" [disabled]="firstNameFromUser">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label>Last name: </label>
+                            <input class="form-control" [(ngModel)]="lastName" [disabled]="lastNameFromUser">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label>Country: </label>
+                            <select class="form-control" [(ngModel)]="country" [disabled]="countryFromUser">
+                                <option value="" disabled selected>Select Country</option>
+                                <option *ngFor="let country of countries" [value]="country.code">{{country.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label>Email: </label>
+                            <input type="email" class="form-control" [(ngModel)]="email" [disabled]="emailFromUser">
+                        </div>
+                    </div>
+                    <div class="col-md-6" *ngIf="!isLoggedIn">
+                        <div>
+                            <label>Password: </label>
+                            <input type="password" class="form-control" [(ngModel)]="password">
+                        </div>
+                    </div>
+                    <div class="col-md-6" *ngIf="!isLoggedIn">
+                        <div>
+                            <label>Repeat Password: </label>
+                            <input type="password" class="form-control" [(ngModel)]="repeat_password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-checkout-item">
+                <span>Credit Card</span>
+                <img class="payment-icon" src="assets/checkout/visa.png">
+                <img class="payment-icon" src="assets/checkout/mastercard.png">
+                <img class="payment-icon" src="assets/checkout/americanexpress.png">
+                <div>
+                    <div id="card-element" #cardElement>
+                        <!-- A Stripe Element will be inserted here. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="new-checkout-footer">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="purchase()">Start subscription</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

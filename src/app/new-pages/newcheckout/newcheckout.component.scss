@@ -1,0 +1,74 @@
+.new-checkout {
+  .new-checkout-header {
+    text-align: center;
+    padding-bottom: 5%;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .checkout-error {
+    text-align: center;
+    width: 100%;
+    color: orangered;
+  }
+  .new-checkout-content {
+    .row > div {
+      padding: 1%;
+    }
+    .row > div > div {
+      background: #f0f0f0;
+      border-radius: 3px;
+      display: flex;
+      float:none;
+      padding: 0 2%;
+      justify-content: flex-start;
+    }
+    .row div > label {
+      flex: auto;
+      width: auto;
+      align-self: center;
+      margin:0;
+      white-space: nowrap;
+    }
+    .row div > input {
+      flex: auto;
+      margin:0;
+      align-self: center;
+      background: transparent;
+      border:none;
+      outline:none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    .row div > select {
+      flex: auto;
+      margin:0;
+      align-self: center;
+      background: transparent;
+      border:none;
+      outline:none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    .new-checkout-item {
+      padding: 3%;
+    }
+    .new-checkout-item > img {
+        height: 30px;
+    }
+    .new-checkout-item > span {
+      padding-right: 3%;
+    }
+    #card-element {
+      background: lightcyan;
+      padding: 12px;
+    }
+  }
+  .new-checkout-footer {
+    padding: 5% 0;
+  }
+}

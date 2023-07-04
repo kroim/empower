@@ -1,0 +1,9 @@
+@mixin normal-width {
+  padding-left: calc((100% - 850px + 20px) / 2);
+  padding-right: calc((100% - 850px + 20px) / 2);
+}
+
+@mixin wide-width {
+  padding-left: calc((100% - 1250px + 20px) / 2);
+  padding-right: calc((100% - 1250px + 20px) / 2);
+}

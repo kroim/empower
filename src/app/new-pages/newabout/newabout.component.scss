@@ -1,0 +1,44 @@
+@import "../../../variables.scss";
+
+#new_about_page {
+  h1 {
+    color: $light-green;
+  }
+  .image-section {
+    width: 100%;
+    padding: 5% 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .about-empower-section {
+    padding: 5% 0;
+  }
+  .about-team-section {
+    padding: 5% 0 10%;
+    .profile-row{
+      display: flex;
+    }
+    .profile-information {
+      display: flex;
+      float: none;
+      padding: 20px 10px 30px;
+    }
+    .profile-image, .profile-description {
+      flex: 40%;
+      width: 40%;
+      align-self: center;
+      font-size: 15px;
+    }
+    .profile-description {
+      flex: 60%;
+      line-height: 1;
+      p {
+        margin: 0;
+        padding: 0 5%;
+      }
+    }
+  ;
+  }
+}

@@ -1,0 +1,173 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>
+<div class="container">
+    <div class="new-account">
+        <div class="new-account-header">
+            <div class="account-icon">
+                <img src="assets/new-pages/hand.png">
+            </div>
+            <h1>Hi, {{ firstName }}</h1>
+            <h3>you've cleaned {{ userTotal }} kg!</h3>
+        </div>
+
+        <div class="new-account-content">
+
+            <div class="account-group-item">
+                <div class="group-header">
+                    <a class="anchor-header" href="javascript:;" (click)="showHide('personal')">
+                        <i class="fa fa-close" *ngIf="personalShow"></i>
+                        <i class="fa fa-plus" *ngIf="!personalShow"></i>
+                        <span>Personal information</span>
+                    </a>
+                    <a class="anchor-edit" href="javascript:;" (click)="editFunc('personal')">Edit</a>
+                </div>
+                <div class="group-item-content" *ngIf="personalShow">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                <label>First name: </label>
+                                <input class="form-control" [(ngModel)]="firstName" [disabled]="profileEditMode">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <label>Last name: </label>
+                                <input class="form-control" [(ngModel)]="lastName" [disabled]="profileEditMode">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <label>Country: </label>
+                                <select class="form-control" [(ngModel)]="country" [disabled]="profileEditMode">
+                                    <option value="" disabled selected>Select Country</option>
+                                    <option *ngFor="let country of countries" [value]="country.code">{{country.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <label>Email: </label>
+                                <input type="email" class="form-control" value="{{ email }}" disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-6" *ngIf="!profileEditMode">
+                            <div>
+                                <label>Password: </label>
+                                <input type="password" class="form-control" [(ngModel)]="editPassword">
+                            </div>
+                        </div>
+                        <div class="col-md-6" *ngIf="!profileEditMode">
+                            <div>
+                                <label>Repeat Password: </label>
+                                <input type="password" class="form-control" [(ngModel)]="editRepeatPassword">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="!profileEditMode">
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-success btn-block" (click)="saveChanges()">Save Changes</button>
+                        </div>
+                        <div class="col-md-3">
+                        <button type="button" class="btn btn-danger btn-block" (click)="cancelChanges()">Cancel</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-group-item">
+                <div class="group-header">
+                    <a class="anchor-header" href="javascript:;" (click)="showHide('payment')">
+                        <i class="fa fa-close" *ngIf="paymentShow"></i>
+                        <i class="fa fa-plus" *ngIf="!paymentShow"></i>
+                        <span>Payment information:</span>
+                    </a>
+                    <a class="anchor-edit" href="javascript:;" (click)="editFunc('payment')">Update</a>
+                </div>
+                <div class="group-item-content" [hidden]="!paymentShow">
+                    <label>Credit Card </label><img id="card_image" src="assets/new-pages/cards.jpg">
+                    <p>Safe money transfer using your bank account. Visa, Master, Discover, American Express</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                <label>Visa </label>
+                                <input type="text" class="form-control" value="**** **** **** **** 0004" [disabled]="cardUpdateMode">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <label></label>
+                                <input type="text" class="form-control" value="MM/YY" [disabled]="cardUpdateMode">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <label></label>
+                                <input type="text" class="form-control" value="CVC" [disabled]="cardUpdateMode">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-group-item">
+                <div class="group-header">
+                    <a class="anchor-header" href="javascript:;" (click)="showHide('funded')">
+                        <i class="fa fa-close" *ngIf="fundedShow"></i>
+                        <i class="fa fa-plus" *ngIf="!fundedShow"></i>
+                        <span>Funded cleanups: {{ userTotal }} kg</span>
+                    </a>
+                </div>
+                <div class="group-item-content" [hidden]="!fundedShow">
+                    <div [hidden]="!(impacts.length > 0)" class="impact-map">
+                        <div #impactmap style="width:100%;height:400px"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-group-item">
+                <div class="group-header">
+                    <a class="anchor-header" href="javascript:;" (click)="showHide('order')">
+                        <i class="fa fa-close" *ngIf="orderShow"></i>
+                        <i class="fa fa-plus" *ngIf="!orderShow"></i>
+                        <span>Subscriptions / orders: </span>
+                    </a>
+                </div>
+                <div class="group-item-content" [hidden]="!orderShow">
+                    <p>Note: For PayPal Subscriptions you need to go to PayPal.com to make any changes To change other types of Subscriptions,
+                        please contact us at <a href="javascript:;">support@empower.eco</a></p>
+                    <div class="row order-header">
+                        <div class="col-md-3">Date</div>
+                        <div class="col-md-3">Order type</div>
+                        <div class="col-md-2">Payment</div>
+                        <div class="col-md-2">Amount</div>
+                        <div class="col-md-2">Status</div>
+                    </div>
+                    <div *ngFor="let orderItem of orders.orderList">
+                        <div class="row order-item">
+                            <div class="col-md-3">{{ orderItem.date | date }}</div>
+                            <div class="col-md-3">
+                                {{ orderItem.type === 'subscription'?'Empower Monthly Sponsorship':'One Time Sponsorship' }}</div>
+                            <div class="col-md-2">
+                                {{ orderItem.paymentOption === 'stripe'?'Credit Card':orderItem.paymentOption }}</div>
+                            <div class="col-md-2">
+                                ${{ orderItem.amount }}<span *ngIf="orderItem.type==='subscription'">/mo</span>
+                            </div>
+                            <div class="col-md-2">
+                                {{ orderItem.completed === true?'Done':'Ongoing' }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="new-account-bottom">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-danger btn-lg btn-block" (click)="logout()">Log out</button>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
