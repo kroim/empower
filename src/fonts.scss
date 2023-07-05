@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'HK Kontrast';
+    src: url('assets/HK-Kontrast/HKKontrast-Bold.eot');
+    src: url('assets/HK-Kontrast/HKKontrast-Bold.eot?#iefix') format('embedded-opentype'),
+        url('assets/HK-Kontrast/HKKontrast-Bold.woff2') format('woff2'),
+        url('assets/HK-Kontrast/HKKontrast-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'HK Grotesk Light Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-LightLegacy.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-LightLegacy.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-LightLegacy.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-LightLegacy.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Medium Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-MediumLegacy.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-MediumLegacy.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-MediumLegacy.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-MediumLegacy.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-SemiBold.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-SemiBold.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-Bold.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-Bold.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk SmBold Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-SemiBoldLegacyItalic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-SemiBoldLegacyItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-SemiBoldLegacyItalic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-SemiBoldLegacyItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-Regular.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-Regular.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk SemiBold Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-SemiBoldLegacy.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-SemiBoldLegacy.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-SemiBoldLegacy.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-SemiBoldLegacy.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-MediumItalic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-MediumItalic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-BoldLegacy.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-BoldLegacy.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-BoldLegacy.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-BoldLegacy.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-Light.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-Light.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-Light.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-BoldLegacyItalic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-BoldLegacyItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-BoldLegacyItalic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-BoldLegacyItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-SemiBoldItalic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-SemiBoldItalic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-Medium.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-Medium.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-BoldItalic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-BoldItalic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-LegacyItalic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-LegacyItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-LegacyItalic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-LegacyItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Medium Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-MediumLegacyItalic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-MediumLegacyItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-MediumLegacyItalic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-MediumLegacyItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-LightItalic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-LightItalic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Light Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-LightLegacyItalic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-LightLegacyItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-LightLegacyItalic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-LightLegacyItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('assets/HKGrotesk/HKGrotesk-Italic.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-Italic.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-Italic.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Legacy';
+    src: url('assets/HKGrotesk/HKGrotesk-RegularLegacy.eot');
+    src: url('assets/HKGrotesk/HKGrotesk-RegularLegacy.eot?#iefix') format('embedded-opentype'),
+        url('assets/HKGrotesk/HKGrotesk-RegularLegacy.woff2') format('woff2'),
+        url('assets/HKGrotesk/HKGrotesk-RegularLegacy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+// new fonts
+@font-face {
+    font-family: 'GTWalsheimProMedium';
+    src: url('assets/fonts/GTWalsheimProMedium.eot');
+    src: url('assets/fonts/GTWalsheimProMedium.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/GTWalsheimProMedium.woff2') format('woff2'),
+    url('assets/fonts/GTWalsheimProMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimProRegular';
+    src: url('assets/fonts/GTWalsheimProRegular.eot');
+    src: url('assets/fonts/GTWalsheimProRegular.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/GTWalsheimProRegular.woff2') format('woff2'),
+    url('assets/fonts/GTWalsheimProRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimProBold';
+    src: url('assets/fonts/GTWalsheimProBold.eot');
+    src: url('assets/fonts/GTWalsheimProBold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/GTWalsheimProBold.woff2') format('woff2'),
+    url('assets/fonts/GTWalsheimProBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimProBlack';
+    src: url('assets/fonts/GTWalsheimProBlack.eot');
+    src: url('assets/fonts/GTWalsheimProBlack.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/GTWalsheimProBlack.woff2') format('woff2'),
+    url('assets/fonts/GTWalsheimProBlack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimProLight';
+    src: url('assets/fonts/GTWalsheimProLight.eot');
+    src: url('assets/fonts/GTWalsheimProLight.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/GTWalsheimProLight.woff2') format('woff2'),
+    url('assets/fonts/GTWalsheimProLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
