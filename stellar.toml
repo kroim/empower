@@ -1,0 +1,39 @@
+#https://www.stellar.org/developers/guides/walkthroughs/how-to-complete-stellar-toml.html
+
+ACCOUNTS=[
+""
+]
+
+[DOCUMENTATION]
+ORG_NAME="Empower AS"
+ORG_URL="https://empower.eco"
+ORG_LOGO="https://empower.eco/assets/empower-logo.png" #TODO GRØNN BAKGRUNN!!!
+ORG_DESCRIPTION=""
+ORG_PHYSICAL_ADDRESS="Martin Borrebekkens vei 11D, 0584 OSLO, NORWAY" 
+ORG_PHONE_NUMBER="+47 "
+ORG_TWITTER="empowereco"
+ORG_OFFICIAL_EMAIL="info@empower.eco"
+
+[[PRINCIPALS]]
+name="Jane Jedidiah Johnson"
+email="jane@domain.com"
+twitter="@crypto_jane"
+keybase="crypto_jane"
+github="crypto_jane"
+id_photo_hash="5g249e170f4f134b18ab3de069c5a13e5c3ef3ef90f3643afa15a1603c34cf38"
+verification_photo_hash="693687f6abd594366a09cfe6b380e58f9023867a851cc9fa71f302ab4889e48"
+
+[[CURRENCIES]]
+code="BTC"
+issuer="GAOO3LWBC4XF6VWRP5ESJ6IBHAISVJMSBTALHOQM2EZG7Q477UWA6L7U"
+status="live"
+display_decimals=7
+name="Bitcoin"
+desc="Organization promises to purchase each BTC token from any holder for the value of 1 Bitcoin"
+conditions="Withdrawal fees apply"
+image="https://domain.com/img/Bitcoin-100x100.png"
+anchor_asset_type="crypto"
+anchor_asset="BTC"
+redemption_instructions="Use SEP6 with our federation server"
+collateral_addresses=["2C1mCx3ukix1KfegAY5zgQJV7sanAciZpv"]
+collateral_address_signatures=["304502206e21798a42fae0e854281abd38bacd1aeed3ee3738d9e1446618c4571d10"]
