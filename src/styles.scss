@@ -1,0 +1,187 @@
+@import "~ngx-smart-modal/ngx-smart-modal";
+//@import "../node_modules/spectre.css/src/spectre";
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/css/font-awesome.css";
+@import "./fonts.scss";
+//@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* You can add global styles to this file, and also import other style files */
+
+@import "./variables.scss";
+
+html {
+  height: 100%;
+}
+
+.modal-background-custom-content {
+  overflow: hidden;
+  position: fixed;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: "GTWalsheimProRegular", sans-serif;
+  font-weight: 400;
+  font-size: 13pt;
+  letter-spacing: 0.4px;
+  height: 100%;
+}
+
+ol {
+  list-style: decimal;
+  li {
+    margin-left: 19px;
+  }
+}
+
+ul {
+  list-style: disc outside;
+  li {
+    margin-left: 15px;
+  }
+}
+
+.nsm-dialog {
+  max-width: 1000px;
+  padding: 0 50px;
+
+  .nsm-content {
+    background-color: $dark-green;
+    color: $light-blue;
+    font-size: 15pt;
+    h1 {
+      color: $light-green;
+    }
+  }
+}
+
+.cc-window {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.cc-btn.cc-dismiss {
+  background-color: rgba(88, 215, 168, 0.5) !important;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $light-green;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $light-green;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $light-green;
+}
+
+app-page {
+  display: block;
+  margin-top: 40px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+  }
+}
+
+input:disabled, select:disabled {
+  -webkit-text-fill-color: $light-green
+}
+
+textarea {
+  border: none;
+  color: $light-green;
+}
+
+label.checkbox-label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+  margin-bottom: 15px;
+}
+
+select {
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
+}
+h1, h2, h3, h4, h5 {
+  letter-spacing: 1.2px;
+  font-family: GTWalsheimProBold;
+}
+
+.columns {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.column.col-green {
+  background-color: $dark-green;
+  color: $light-blue;
+
+  h1, h2, h3, h4, h5 {
+    color: $light-green;
+  }
+}
+
+.column.col-white {
+  background-color: #fff;
+}
+
+.column.col-blue {
+  background-color: $dark-blue;
+  color: #fff;
+}
+
+.column.col-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.column.col-right {
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media screen and (min-width: 1250px) {
+    padding: 5% 15% 5% 15%;
+  }
+}
+
+.column.col-left {
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @media screen and (min-width: 1250px) {
+    padding: 5% 15% 5% 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nsm-content {
+    margin: 0;
+  }
+
+  .nsm-dialog {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nsm-content {
+    margin: 0;
+  }
+
+  .nsm-dialog {
+    padding: 20px;
+  }
+}
+
